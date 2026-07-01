@@ -118,7 +118,9 @@ core.onclick = (e)=>{
   void core.offsetWidth;
   core.classList.add("shake");
 
-  update();
+  update(const glow = Math.min(1, coins / 10000);
+document.getElementById("core").style.boxShadow =
+`0 0 ${20 + glow*80}px rgba(255,200,0,${0.2 + glow})`;);
 };
 
   let crit = Math.random()<0.1;
