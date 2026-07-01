@@ -80,3 +80,49 @@ canvas{
   pointer-events:none;
   z-index:1;
   }
+#menuBtn{
+  position:fixed;
+  top:10px;
+  left:10px;
+  z-index:1000;
+  font-size:24px;
+  background:#111827;
+  color:white;
+  border:none;
+  padding:10px;
+  border-radius:10px;
+}
+
+#menu{
+  position:fixed;
+  top:50px;
+  left:10px;
+  background:#0f172a;
+  padding:10px;
+  border-radius:10px;
+  z-index:999;
+}
+
+.hidden{
+  display:none;
+}
+
+#console{
+  position:fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  background:black;
+  color:lime;
+  z-index:9999;
+  padding:10px;
+}
+
+#consoleInput{
+  width:100%;
+  background:black;
+  color:lime;
+  border:none;
+  outline:none;
+  margin-top:5px;
+  }
