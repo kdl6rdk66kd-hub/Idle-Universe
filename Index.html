@@ -35,5 +35,38 @@
 </div>
 
 <script src="script.js"></script>
+  <button id="menuBtn">☰</button>
+
+<div id="menu" class="hidden">
+
+  <h2>MENU</h2>
+
+  <button onclick="toggleConsole()">💻 Consola</button>
+  <button onclick="toggleSettings()">⚙ Config</button>
+  <button onclick="resetGame()">🔄 Reset</button>
+
+</div>
+
+<div id="console" class="hidden">
+
+  <div id="consoleLog"></div>
+
+  <input id="consoleInput" placeholder="escribe comando..." />
+
+</div>
+
+<div id="settings" class="hidden">
+
+  <label>
+    <input type="checkbox" id="soundToggle" checked>
+    Sonido
+  </label>
+
+  <label>
+    <input type="checkbox" id="vibrationToggle" checked>
+    Vibración
+  </label>
+
+  </div>
 </body>
   </html>
