@@ -79,6 +79,48 @@ const core = document.getElementById("core");
 
 core.onclick = (e)=>{
 
+  let crit = Math.random()<0.12;
+  let eventMult = eventActive ? eventActive.mult : 1;
+
+  let gain = clickPower * globalMult * eventMult * (crit ? 3 : 1);
+
+  coins += gain;
+  daily.progress += gain;
+
+  // 🎧 SONIDO
+  if(document.getElementById("soundToggle")?.checked !== false){
+
+    if(crit){
+      document.getElementById("critSound").currentTime = 0;
+      document.getElementById("critSound").play();
+    } else {
+      document.getElementById("clickSound").currentTime = 0;
+      document.getElementById("clickSound").play();
+    }
+  }
+
+  // 📳 VIBRACIÓN
+  if(navigator.vibrate && document.getElementById("vibrationToggle")?.checked !== false){
+    navigator.vibrate(crit ? 30 : 10);
+  }
+
+  // 💥 FX
+  spawnParticles(e.clientX,e.clientY, crit ? "#ffd700" : "#00d9ff");
+  floatText(
+    e.clientX,
+    e.clientY,
+    (crit ? "CRIT +" : "+") + Math.floor(gain),
+    crit ? "#ffd700" : "white"
+  );
+
+  // 🔥 SHAKE FEEDBACK
+  core.classList.remove("shake");
+  void core.offsetWidth;
+  core.classList.add("shake");
+
+  update();
+};
+
   let crit = Math.random()<0.1;
   let eventMult = eventActive ? eventActive.mult : 1;
 
