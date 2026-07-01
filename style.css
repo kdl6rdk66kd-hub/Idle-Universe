@@ -1,1 +1,52 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:system-ui;
+}
 
+body{
+  background: radial-gradient(circle at top,#0f172a,#020617);
+  color:white;
+  overflow:hidden;
+}
+
+.ui{
+  position:relative;
+  z-index:2;
+  text-align:center;
+}
+
+header{
+  padding:10px;
+}
+
+.title{
+  font-weight:bold;
+  font-size:18px;
+}
+
+.stats{
+  font-size:12px;
+  opacity:.7;
+}
+
+#core{
+  width:180px;
+  height:180px;
+  border-radius:50%;
+  border:none;
+  margin-top:40px;
+  font-size:18px;
+  background: radial-gradient(circle,#ffd700,#ff7a00);
+  box-shadow:0 0 30px rgba(255,200,0,.3);
+}
+
+#core:active{
+  transform:scale(.92);
+}
+
+#shop{
+  margin-top:20px;
+  padding:10px;
+}
